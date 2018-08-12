@@ -67,9 +67,9 @@ class TicTacToe
     end
   end
 
-  def won?(board)
-    empty = board.all? {|spot| spot == " "}
-    full = board.none? {|spot| spot == " "}
+  def won?
+    empty = @board.all? {|spot| spot == " "}
+    full = @board.none? {|spot| spot == " "}
     if empty == true
       return false
     elsif
@@ -78,9 +78,9 @@ class TicTacToe
         windex_2 = win_combo[1]
         windex_3 = win_combo[2]
 
-        pos_1 = board[windex_1]
-        pos_2 = board[windex_2]
-        pos_3 = board[windex_3]
+        pos_1 = @board[windex_1]
+        pos_2 = @board[windex_2]
+        pos_3 = @board[windex_3]
 
         if pos_1 == pos_2 && pos_1 == pos_3 && pos_1 != " "
           return win_combo
