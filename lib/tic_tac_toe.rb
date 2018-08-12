@@ -96,7 +96,7 @@ class TicTacToe
   end
 
   def draw?
-    @board.full? && !@board.won?
+    @board.none? {|spot| spot == " "} && !@board.won?
   end
 
   def over?
