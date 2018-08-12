@@ -38,8 +38,8 @@ class TicTacToe
     index.between?(0,8) && !position_taken?(index)
   end
 
-  def turn(input)
-    #puts "Please enter 1-9"
+  def turn
+    puts "Please enter 1-9"
     input = gets.strip
     @input = input
     if valid_move?(index)
