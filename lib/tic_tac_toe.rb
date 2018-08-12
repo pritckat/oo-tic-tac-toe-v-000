@@ -92,7 +92,7 @@ class TicTacToe
   end
 
   def full?
-    full = @board.none? {|spot| spot == " "}
+    @board.none? {|spot| spot == " "}
   end
 
   def draw?
