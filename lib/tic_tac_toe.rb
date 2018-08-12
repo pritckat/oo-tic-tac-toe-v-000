@@ -91,30 +91,30 @@ class TicTacToe
     end
   end
 
-  def full?(board)
-    full = board.none? {|spot| spot == " "}
+  def full?
+    full = @board.none? {|spot| spot == " "}
   end
 
-  def draw?(board)
-    if full?(board) && !won?(board)
+  def draw?
+    if @board.full? && !@board.won?
       return true
     else
       return false
     end
   end
 
-  def over?(board)
-    if !draw?(board) && !won?(board)
+  def over?
+    if !@board.draw? && !@board.won?
       return false
     else
       return true
     end
   end
 
-  def winner(board)
-    win_combo = won?(board)
-    if won?(board)
-      return board[win_combo[0]]
+  def winner
+    win_combo = @board.won?
+    if @board.won?
+      return @board[win_combo[0]]
     else
       return nil
     end
