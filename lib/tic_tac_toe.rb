@@ -120,6 +120,7 @@ class TicTacToe
     until over?
       turn
       over?
+      turn
     end
     if won?
       puts "Congratulations #{winner}!"
