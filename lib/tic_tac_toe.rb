@@ -100,7 +100,7 @@ class TicTacToe
   end
 
   def over?
-    if !@board.draw? && !@board.won?
+    if !draw? && !won?
       return false
     else
       return true
